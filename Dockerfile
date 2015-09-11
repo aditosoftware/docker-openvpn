@@ -17,5 +17,6 @@ RUN git clone --depth 1 --branch v3.0.0 https://github.com/OpenVPN/easy-rsa.git 
 RUN gunzip -c /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz > /etc/openvpn/server.conf
 
 ADD start.sh /a/start.sh
+RUN chmod 777 /a/start.sh
 
 CMD ["/a/start.sh"]

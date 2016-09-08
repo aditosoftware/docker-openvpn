@@ -1,5 +1,7 @@
-# openvpn
+# Docker OpenVPN
 
-Quick Start
+## Quick Start
 
-docker run adito/openvpn --privileged=true
+```console
+$ docker run --name openvpn -p 1194:1194 -v /my/own/datadir:/a/config --privileged=true adito/openvpn
+```

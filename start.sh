@@ -14,4 +14,4 @@ then
 fi
 ln -sf /a/config/vars /etc/openvpn/easy-rsa/
 
-openvpn --config /etc/openvpn/server.conf
+openvpn --verb 3 --config /etc/openvpn/server.conf

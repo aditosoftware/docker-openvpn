@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 COPY start.sh /a/start.sh
 
 RUN DEBIAN_FRONTEND=noninteractive \
- && apt update && apt install -y wget \
+ && apt update && apt install -y wget perl \
  && wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg | apt-key add - \
  && echo "deb http://build.openvpn.net/debian/openvpn/release/2.4 xenial main" > /etc/apt/sources.list.d/openvpn-aptrepo.list \
  && apt-get update \
